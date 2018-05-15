@@ -1,0 +1,26 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Thanks</title>
+</head>
+<body>
+    <p>
+        <h1>Thank you, @Model.Name!</h1>
+        @if (Model.WillAttend == true)
+        {
+            @:It's great that you are joining the Party! See you there!'
+        }
+        else { 
+            @:Sorry that you can't make it to the party, hope to see you next time.'
+        }
+    </p>
+    <p>Click <a asp-action="ListResponses">here</a> to see who is attending.</p>
+</body>
+</html>
