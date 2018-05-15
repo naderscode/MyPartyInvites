@@ -1,5 +1,6 @@
 ﻿using System;
 using Microsoft.AspNetCore.Mvc;
+using PartyInvites.Controllers;
 
 
 namespace PartyInvites.Controllers
@@ -12,10 +13,17 @@ namespace PartyInvites.Controllers
             ViewBag.Greeting = hour < 12 ? "Good Morning" : "Good Afternoon";
             return View("MyView");
         }
-
+            [HttpGet]
         public ViewResult RsvpForm() {
             return View();
         }
+        [HttpPost]
+        public ViewResult RsvpForm(GuestResponse guestResponse) {
+            // store response from guest
+            return View();
+
+        }
+
 /*
         public string Index() {
             return "Hello World";
