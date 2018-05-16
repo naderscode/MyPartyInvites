@@ -9,15 +9,18 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>MyView</title>
+    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.css" />
 </head>
 <body>
-    <div>
+    <div class="text-center">
         <h1>@ViewBag.Greeting</h1>
         <h2>Join us at the Party</h2>
+        <h3>We're going to have an awesome party!</h3>
+        <h4>And YOU are invited!</h4>
         <img src="https://cherrypopstudio.files.wordpress.com/2011/07/party.jpg" width="640px" height="480px" />
         <br />
         <div>
-            <h3><a asp-action="RsvpForm">RSVP Now</a></h3>
+            <h3><a class="btn btn-primary" asp-action="RsvpForm">RSVP Now</a></h3>
         </div>
 
     </div>
